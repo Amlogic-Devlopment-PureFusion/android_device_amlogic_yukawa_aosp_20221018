@@ -70,6 +70,8 @@ endif
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_COPY_OUT_VENDOR := vendor
 
+### ------------------------------------------------------------------------------- ###
+
 # Reserve space for gapps install
 ifeq ($(RESERVE_SPACE),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := 8192
