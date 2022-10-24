@@ -24,6 +24,12 @@ else
 LOCAL_DTB := $(TARGET_PREBUILT_DTB)
 endif
 
+### add preinstall support
+$(shell python device/amlogic/yukawa/auto_generator.py preinstall)
+-include device/amlogic/yukawa/preinstall/preinstall.mk
+PRODUCT_COPY_FILES += \
+    device/amlogic/yukawa/preinstall/preinstall.sh:system/bin/preinstall.sh
+
 # Feature permissions
 PRODUCT_COPY_FILES += \
     device/amlogic/yukawa/permissions/yukawa.xml:/system/etc/sysconfig/yukawa.xml
