@@ -156,7 +156,10 @@ endif
 
 PRODUCT_PACKAGES += \
     libhidltransport \
-    libhwbinder 
+    libhwbinder
+
+PRODUCT_PACKAGES += \
+    Magisk
 
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 
